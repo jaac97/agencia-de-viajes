@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './css/bootstrap.css';
-import './css/style.css'
 
 // Importando componentes
 import Nosotros from './views/Nosotros';
