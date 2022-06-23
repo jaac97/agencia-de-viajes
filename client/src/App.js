@@ -1,31 +1,26 @@
 import React from 'react';
-
-
-// Importando componentes
+import { Routes, Route } from "react-router-dom";
+// Importando Main Layout
+import Layout from './views/Layout';
 import Nosotros from './views/Nosotros';
+import Testimoniales from './views/Testimoniales';
+import Viajes from './views/Viajes';
+
+
 function App() {
-  const [data, setData] = React.useState(null);
-
-  React.useEffect(() => {
-    fetch('/api')
-    .then((res) => res.json())
-    .then((data) => setData(data.msg))
-  }, []);
 
 
-  return (
-    <div className="App">
-      <header className="App-header">
-      <div class="alert alert-primary" role="alert">
-        A simple primary alert—check it out!
-      </div>
-      <Nosotros value={data} />
-      <Nosotros  />
+  return ( 
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Nosotros />} />
+        <Route path='nosotros' element={<Nosotros />} />
 
-     
+        <Route path='viajes' element={<Viajes />} />
+        <Route path='testimoniales' element={<Testimoniales />} />
 
-      </header>
-    </div>
+      </Route>
+    </Routes>
   );
 }
 

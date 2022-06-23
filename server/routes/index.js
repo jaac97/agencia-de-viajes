@@ -6,4 +6,15 @@ Router.get("/api", (req, res) => {
         msg: "Aprendiendo alv"
     });
 });
+
+Router.get('/year', (req, res) => {
+/*     res.locals.unaVariable = "Nueva variable" */
+    // console.log(res.locals);
+    const year = new Date().getFullYear()
+    res.json({
+        year:year
+ })
+})
+
+
 export default Router;

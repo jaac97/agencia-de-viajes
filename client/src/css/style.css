@@ -166,3 +166,11 @@ i {
     font-weight: bold;
     margin-top: 1rem;
 }
+
+.sidebar {
+    height: 100vh;
+    background-color: crimson;
+
+    margin-left: 0;
+    margin-right: auto;
+}
